@@ -1,7 +1,7 @@
 import Route from "./route";
-import testdataController from "@/controllers/testdata.controller";
+import testdataController from "../controllers/testdata.controller";
 import multer from 'multer';
-import { storage } from "@/controllers/testdata.controller";
+import { storage } from "../controllers/testdata.controller";
 
 const upload = multer({ storage });
 

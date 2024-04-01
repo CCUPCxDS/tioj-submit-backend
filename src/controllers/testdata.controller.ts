@@ -56,13 +56,16 @@ class testdataController {
         'commit': 'Sign in'
       }, {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+          'Accept': '*/*', // 修改此处来匹配 'Accept' 头部
+          'Accept-Encoding': 'gzip, deflate', // 确保只包括 'gzip' 和 'deflate'
+          'Content-Type': 'application/x-www-form-urlencoded', // 确保内容类型匹配
+          'User-Agent': 'python-requests/2.31.0' // 设置 User-Agent 以匹配 Python requests 库的版本
         }
       });
   
       console.log('Login successful!');
     } catch (error) {
-      console.error('Login failed:', error);
+      // console.error('Login failed:', error);
     } finally {
   
     }
